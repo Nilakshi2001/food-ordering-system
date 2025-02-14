@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering - Product Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTDUj7ys9m7X9w9h2ZQLTT1rH4H_e8TxfkPg&s'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .product-img {
+            width: 50%; /* Reduced width to 50% */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 200px; /* Set a maximum height */
+            object-fit: contain; /* Use contain to fit within the box */
+            display: block; /* Prevents image from affecting layout */
+            margin: 0 auto; /* Centers the image horizontally */
+        }
+        .product-card {
+          display: flex; /* Enable flexbox for vertical alignment */
+          flex-direction: column; /* Stack elements vertically */
+          align-items: center; /* Center items horizontally */
+        }
+        .p-4 {
+          text-align: center; /* Center text within the card */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Our Products</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product Cards -->
+            <script>
+                const products = [
+                    { name: 'Italian Truffle Oil', price: 'Rs.6800.00', quantity: '250ml bottle', description: 'Premium extra virgin olive oil infused with real black truffle essence. Adds a luxurious aroma and flavor to pasta, risotto, and gourmet dishes.', origin: 'Italy', image: 'images/Italian oil.png' },
+                    { name: 'Mexican Mole Sauce', price: 'Rs.2900.00', quantity: '300g jar', description: 'Traditional mole sauce made with chili peppers, nuts, and chocolate. Ideal for creating authentic Mexican dishes like enchiladas and chicken mole.', origin: 'Mexico', image: 'images/Mexicon Source.png' },
+                    { name: 'French Lavender Honey', price: 'Rs.4400.00', quantity: '250g jar', description: 'Pure, aromatic honey sourced from lavender fields in Provence. A perfect addition to teas, desserts, or as a spread.', origin: 'France', image: 'images/French Honey.png' },
+                    { name: 'Sri Lankan Coconut Sambol Mix', price: 'Rs.1140.00', quantity: '500g', description: 'Authentic Sri Lankan coconut sambol blend, ready to mix with grated coconut for a spicy and tangy condiment.', origin: 'Sri Lanka', image: 'images/Srlankan coco.png' },
+                    { name: 'Korean Kimchi Seasoning Powder', price: 'Rs.8000.00', quantity: '100g', description: 'Traditional kimchi seasoning mix with chili, garlic, and spices.', origin: 'South Korea', image: 'images/Korean Kimchi Seasoning Powder.png' },
+                    { name: 'Moroccan Harissa Paste', price: 'Rs.3600.00', quantity: '226g jar', description: 'Spicy and aromatic harissa paste made with roasted chili peppers, garlic, and spices.', origin: 'Morocco', image: 'images/Moroccan Harissa Paste.png' },
+                    { name: 'Japanese Nori Sheets', price: 'Rs.1700.00', quantity: '8 sheets', description: 'Premium roasted seaweed sheets for sushi and snacks.', origin: 'Japan', image: 'images/Japanese Nori Sheets - Kōmi, Japanese Nori, B Grade.png' },
+                    { name: 'Turkish Delight with Pistachios', price: 'Rs.6200.00', quantity: '250g box', description: 'Authentic Turkish delight made with rosewater and generously filled with premium pistachios.', origin: 'Turkey', image: 'images/Turkish Delight with Pistachios – HazerBaba Turkish Delight.png' },
+                    { name: 'Greek Kalamata Olives', price: 'Rs.2300.00', quantity: '500g jar', description: 'Traditional Kalamata olives preserved in brine and olive oil.', origin: 'Greece', image: 'images/Greek Kalamata Olives.png' },
+                    { name: 'Finch Organic Quinoa Grain', price: 'Rs.990.00', quantity: '150g', description: 'Organic Quinoa is a fantastic grain that is rich in protein and high in fibre.', origin: 'Peru', image: 'images/Finch Organic Quinoa Grain.png' },
+                    { name: 'Ethiopian Yirgacheffe Coffee Beans', price: 'Rs.6300.00', quantity: '453g', description: 'This single-origin Ethiopian coffee offers a smooth yet surprisingly deep body and crisp acidity.', origin: 'Ethiopia', image: 'images/Ethiopian Yirgacheffe Coffee Beans.png' },
+                    { name: 'Thai Green Curry Paste', price: 'Rs.280.00', quantity: '60g', description: 'Thai Green Curry Paste is a delicious blend of authentic spices.', origin: 'Thailand', image: 'images/Thai Green Curry Paste.png' }
+                ];
+
+                document.write(products.map(product => `
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="product-img">
+                        <div class="p-4">
+                            <h2 class="text-xl font-semibold">${product.name}</h2>
+                            <p class="text-gray-700">Price: ${product.price}</p>
+                            <p class="text-gray-600">${product.quantity}</p>
+                            <p class="mt-2 text-sm text-gray-500">${product.description}</p>
+                            <p class="mt-2 text-sm text-gray-500">Country of Origin: ${product.origin}</p>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+    </div>
+</body>
+</html>
+

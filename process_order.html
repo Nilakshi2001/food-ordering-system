@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/031/182/618/small/top-view-vegetables-on-deep-blue-background-vegetarian-organic-food-banner-created-by-ai-tools-photo.jpg'); /* Set background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .order-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <h2 class="text-center">Place Your Order</h2>
+        <form action="order_process.php" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Delivery Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="product_id" class="form-label">Product ID</label>
+                <input type="number" class="form-control" id="product_id" name="product_id" required>
+            </div>
+            <div class="mb-3">
+                <label for="discount" class="form-label">Discount Code (Optional)</label>
+                <input type="text" class="form-control" id="discount" name="discount">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Order</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

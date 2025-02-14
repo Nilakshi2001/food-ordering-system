@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Corn Flakes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRppoF-d8kkjOiMxKVO9X_1V1-ALkIaHG73pg&s'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; /* Set default text color to white */
+        }
+
+        /* Existing styles - DO NOT MODIFY */
+        .content-preview p {
+            font-size: 1.2rem;
+        }
+
+        .full-content {
+            display: none;
+        }
+
+        .read-more {
+            cursor: pointer;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .related-article .card {
+            margin-bottom: 20px;
+        }
+
+        .panorama-link {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+
+        /* Add any additional styles here if needed */
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for container */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .blog-post {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for article */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h3, h4, h5 {
+            color: white;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for cards */
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <?php include('includes/header.php'); ?>
+
+    <div class="container mt-5">
+        <article class="blog-post">
+            <h1 class="mb-4">Corn Flakes</h1>
+            <img src="images/cornflasks.png" class="img-fluid mb-4" alt="Corn Flakes" style="max-height: 400px;">
+            
+            <div class="content-preview">
+                <p><strong>Corn flakes</strong>, or cornflakes, are a breakfast cereal made from toasting flakes of corn (maize)...</p>
+                <button class="read-more btn btn-link p-0">Read More ▼</button>
+            </div>
+
+            <div class="full-content">
+                <p>Originally invented as a breakfast food to counter indigestion, it has become a popular food item in the American diet and in the United Kingdom where over 6 million households consume them.</p>
+                
+                <h3>History</h3>
+                <p>The cereal, originally made with wheat, was created by Will Kellogg in 1894 for patients at the Battle Creek Sanitarium... A patent for the process was granted in 1896.</p>
+                
+                <h3>Description</h3>
+                <p>A 360-degree panorama capturing the interior of a cornflakes bag: 
+                    <a href="https://panoviewer.toolforge.org/#Inside_a_cornflakes_bag_%E2%80%93_360%C2%B0_photo.jpg" class="panorama-link">View as a 360° interactive panorama</a>
+                </p>
+                <img src="images/corn flakes close up.jpg" class="img-fluid mb-3" alt="Corn Flakes close-up" style="max-width: 300px;">
+
+                <div class="related-articles mt-5">
+                    <h4 class="mb-4">Related Articles</h4>
+                    <div class="row">
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="images/braneflakes.jpg" class="card-img-top" alt="Bran Flakes">
+                                <div class="card-body">
+                                    <h5>Bran Flakes</h5>
+                                    <div class="content-preview">
+                                        <p>Bran flakes is a type of breakfast cereal similar to corn flakes...</p>
+                                        <button class="read-more btn btn-link p-0">Read More ▼</button>
+                                    </div>
+                                    <div class="full-content">
+                                        <p>It consists of small toasted flakes of wheat or oat bran... Research suggests that eating commercially produced raisin bran containing sugared raisins elevates dental acids...</p>
+                                        <img src="images/brane flakes nutritions.jpg" class="img-fluid mb-3" alt="Bran Flakes nutrition">
+                                        <p>Bran flakes are high in dietary fiber... It can also promote a healthy microbiome.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="images/coconut butter.jpg" class="card-img-top" alt="Coconut Butter">
+                                <div class="card-body">
+                                    <h5>Coconut Butter</h5>
+                                    <div class="content-preview">
+                                        <p>Various parts of the coconut are used to make different coconut-based products...</p>
+                                        <button class="read-more btn btn-link p-0">Read More ▼</button>
+                                    </div>
+                                    <div class="full-content">
+                                        <h6>Health Benefits</h6>
+                                        <ul>
+                                            <li>Contains lauric acid that supports cholesterol management</li>
+                                            <li>Aids in weight loss through metabolism boosting</li>
+                                            <li>Boosts immunity with antiviral properties</li>
+                                        </ul>
+                                        <img src="images/coconut butter uses.jpg" class="img-fluid mb-3" alt="Coconut Butter uses">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <img src="images/peanut butter.jpg" class="card-img-top" alt="Peanut Butter">
+                                <div class="card-body">
+                                    <h5>Peanut Butter</h5>
+                                    <div class="content-preview">
+                                        <p>Peanut butter provides a good amount of protein and essential vitamins...</p>
+                                        <button class="read-more btn btn-link p-0">Read More ▼</button>
+                                    </div>
+                                    <div class="full-content">
+                                        <h6>Nutritional Benefits</h6>
+                                        <p>Contains protein, magnesium, phosphorus, zinc, niacin, and vitamin B-6...</p>
+                                        <h6>Health Benefits</h6>
+                                        <ul>
+                                            <li>Weight management support</li>
+                                            <li>Heart health improvement</li>
+                                            <li>Blood sugar regulation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const container = e.target.closest('.card-body') || e.target.closest('.blog-post');
+                const preview = container.querySelector('.content-preview');
+                const fullContent = container.querySelector('.full-content');
+                
+                if (preview.style.display !== 'none') {
+                    preview.style.display = 'none';
+                    fullContent.style.display = 'block';
+                    e.target.textContent = 'Show Less ▲';
+                } else {
+                    preview.style.display = 'block';
+                    fullContent.style.display = 'none';
+                    e.target.textContent = 'Read More ▼';
+                }
+            });
+        });
+    </script>
+
+    <?php include('includes/footer.php'); ?>
+</body>
+</html>

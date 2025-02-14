@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Food Fusion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/Picture2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: auto;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        /* End Navigation Styles */
+
+        .hero-section {
+            background: url('images/about-hero.png') no-repeat center center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section h1,
+        .hero-section p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .purpose-vision-mission {
+            margin-top: 3rem;
+            text-align: center;
+            background-color: lightgreen;
+            padding: 20px;
+            border-radius: 10px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .purpose-vision-mission h4 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .purpose-vision-mission p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .certification-container {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .certification-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+            width: 260px;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .certification-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .certification-box img {
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .certification-box img:not(.large-certification) {
+            width: 60px;
+        }
+
+        .large-certification {
+            width: 80px !important;
+            margin: 15px 0;
+        }
+
+        .certification-box h5 {
+            font-size: 14px;
+            color: black;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .values-section h3 {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .values-section p {
+            text-align: center;
+        }
+
+        .bottom-image {
+            width: 100%;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <?php include('includes/header.php'); ?>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero-section">
+            <div class="container">
+                <img src="images/logo.png" alt="Logo">
+                <h1 class="display-4">ABOUT US</h1>
+                <p class="lead">Explore World Flavors with us As Your gateway to global flavours</p>
+            </div>
+        </section>
+
+        <main class="custom-container">
+            <section class="main-content">
+                <h2 class="fw-bold">We are the Largest Online Store for Global Ingredients in Sri Lanka</h2>
+                <p class="text-center mb-5">At Food Fusion, we are passionate about making global flavours accessible to everyone. We specialize in offering in authentic, single-origin food items and ingredients from around the world, tailored to suit the Sri Lankan audience.</p>
+            </section>
+
+            <section class="purpose-vision-mission">
+                <h4>Our Purpose</h4>
+                <p>To bring the world’s flavors to Sri Lanka, making authentic international ingredients easily accessible while celebrating diverse culinary traditions.</p>
+                <hr>
+                <h4>Our Vision</h4>
+                <p>To be Sri Lanka’s leading online store for global food ingredients, inspiring home cooks and food enthusiasts to explore authentic international cuisine.</p>
+                <hr>
+                <h4>Our Mission</h4>
+                <p>Delivering high-quality, single-origin food products from around the world, ensuring authenticity, freshness, and convenience while fostering a love for global cuisine among Sri Lankan customers.</p>
+            </section>
+
+            <section>
+                <h3 class="section-title">Our Certifications</h3>
+                <div class="certification-container">
+                    <div class="certification-box">
+                        <h5>Business and Legal Certifications</h5>
+                        <img src="images/Picture17.png" alt="Business Certification" class="large-certification">
+                    </div>
+
+                    <div class="certification-box">
+                        <h5>Food Safety and Quality Certifications</h5>
+                        <img src="images/Picture6.png" alt="Food Safety Certification">
+                        <img src="images/Picture7.png" alt="Quality Certification">
+                        <img src="images/Picture18.png" alt="Safety Certification">
+                    </div>
+
+                    <div class="certification-box">
+                        <h5>Export and Import Certifications</h5>
+                        <img src="images/Picture15.png" alt="Export Certification">
+                        <img src="images/Picture19.png" alt="Import Certification">
+                        <img src="images/Picture20.png" alt="Trade Certification">
+                    </div>
+
+                    <div class="certification-box">
+
+                <h5>International E-Commerce and Payment Certifications</h5>
+                        
+                     <img src="images/Picture21.png" alt="E-Commerce Certification">
+                    
+                     <img src="images/Picture22.png" alt="Payment Certification">
+                        
+             <img src="images/Picture23.png" alt="Security Certification">
+                        
+                     </div>
+                        
+                     </div>
+                        
+                    </section>
+                        
+                        
+                        
+                 <section class="values-section">
+                        
+                        
+                        
+                    <h3>Strength in Diversity, Empowered by Equality and Driven by Sustainability</h3>
+                        
+                        
+                        
+         <p>We are all united and guided by the core values that drive the organization.</p>
+                        
+                        
+                        
+                </section>
+                        
+                        
+                        
+                     <section class="bottom-image">
+                        
+                        
+                        
+                 <img src="images/Picture16.jpg" alt="Sustainability">
+                        
+                        
+                        
+                 </section>
+                        
+                        
+                        
+    </main>
+                        
+            
+                        <?php include('includes/footer.php'); ?>
+                        
+        
+                        
+                         </div>
+                        
+                        
+                        
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                        
+                        
+                        
+        </body>
+                        
+                        
+</html>
