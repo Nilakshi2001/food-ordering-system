@@ -1,4 +1,8 @@
-<?php include('includes/header.php'); ?>
+<?php
+session_start();
+include('db_connect.php'); // ✅ Add this for DB usage
+include('includes/header.php');
+?>
 
 <div class="container mt-5">
     <div class="checkout-steps mb-5">
@@ -10,7 +14,10 @@
     <div id="step-1">
         <h3>Shopping Cart</h3>
         <div class="cart-items">
-            <?php foreach($_SESSION['cart'] as $item): ?>
+            <?php 
+            if (!empty($_SESSION['cart'])):
+                foreach($_SESSION['cart'] as $item): 
+            ?>
             <div class="cart-item row mb-3">
                 <div class="col-md-2">
                     <img src="images/<?= $item['image'] ?>" class="img-fluid">
@@ -23,7 +30,12 @@
                     <p class="price">$<?= $item['price'] * $item['quantity'] ?></p>
                 </div>
             </div>
-            <?php endforeach; ?>
+            <?php 
+                endforeach;
+            else:
+                echo "<p>Your cart is empty.</p>";
+            endif;
+            ?>
         </div>
         
         <div class="discount-section mb-4">
@@ -39,7 +51,10 @@
         <button class="btn btn-primary next-step">Proceed to Checkout</button>
     </div>
 
-    <!-- Add other steps for shipping and payment -->
+    <!-- Future steps: Shipping Info, Payment, Confirmation -->
 </div>
 
-<?php include('includes/footer.php'); ?>
+<?php 
+include('includes/footer.php');
+$conn->close(); // ✅ Close DB connection
+?>

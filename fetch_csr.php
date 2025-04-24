@@ -1,16 +1,15 @@
 <?php
-// Define CSR initiatives as an array
-$csr_initiatives = [
-    "Prioritize recyclable and biodegradable packaging during distribution",
-    "Implement efficient distribution routes to reduce fuel consumption and vehicle emissions",
-    "Partner with environmentally friendly delivery services",
-    "Ensure safe working conditions and environmental responsibility throughout the supply chain",
-    "Support culinary education programs: Sponsor scholarships or provide resources for culinary schools and training programs for underprivileged youth"
-];
+include 'db_connect.php'; // Database connection
 
-// Loop through and display CSR initiatives
-foreach ($csr_initiatives as $initiative) {
-    echo "<li>$initiative</li>";
+$result = $conn->query("SELECT description FROM csr_initiatives");
+
+echo "<ul>";
+while ($row = $result->fetch_assoc()) {
+    echo "<li>{$row['description']}</li>";
 }
+echo "</ul>";
+
+$conn->close();
 ?>
+
 

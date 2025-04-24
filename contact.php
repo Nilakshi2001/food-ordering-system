@@ -1,21 +1,38 @@
-<?php include('includes/header.php'); ?>
+<?php 
+include('includes/header.php'); 
+include('db_connect.php'); // Database connection
+
+// Optional: Save contact message if form submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $conn->real_escape_string($_POST["name"]);
+    $email = $conn->real_escape_string($_POST["email"]);
+    $message = $conn->real_escape_string($_POST["message"]);
+
+    $sql = "INSERT INTO contact_messages (name, email, message) VALUES ('$name', '$email', '$message')";
+    if ($conn->query($sql)) {
+        echo "<div class='alert alert-success'>Message sent successfully!</div>";
+    } else {
+        echo "<div class='alert alert-danger'>Error: " . $conn->error . "</div>";
+    }
+}
+?>
 
 <div class="container mt-5">
     <h2>Contact Us</h2>
     <div class="row">
         <div class="col-md-6">
-            <form>
+            <form method="POST" action="">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <input type="text" class="form-control" name="name" id="name" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
+                    <input type="email" class="form-control" name="email" id="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                    <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
